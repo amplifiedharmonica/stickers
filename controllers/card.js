@@ -82,7 +82,7 @@ exports.getCard = function(req, res) {
     Card.findOne({cardid:req.params.card_id}, function(err, card) {
         if (err)
             res.send(err);
-        if (Card.cardid == null)
+        if (!card)
             res.render('index', {title: 'Sorry, no such card yet'})
         else {
             res.render('index', {title: card.title, body: card.text, image: card.image});
