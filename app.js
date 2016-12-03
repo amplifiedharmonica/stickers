@@ -14,7 +14,8 @@ var users = require('./routes/users');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+var path = require ('path');
+app.use(express.static(path.join(__dirname + '.../public')));
 app.set('view engine', 'pug');
 
 
