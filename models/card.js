@@ -3,6 +3,8 @@ var mongoose = require('mongoose');
 
 // Define our beer schema
 var CardSchema   = new mongoose.Schema({
+    type: String,
+    link: String,
     title: String,
     text: String,
     cardid: Number,

@@ -1,8 +1,39 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Roboto", Helvetica, Arial, sans-serif;
+
 }
 
 a {
   color: #00B7FF;
+}
+
+
+/*
+    New Card
+*/
+.form-container {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+form {
+    width: 100%;
+
+}
+input {
+    width: 100%;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    line-height: 1.75em;
+
+}
+
+/* Card */
+h2 {
+    text-align: center;
+}
+.sticker-card {
+    padding-left: 5%;
+    padding-right: 5%;
 }

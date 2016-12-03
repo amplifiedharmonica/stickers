@@ -83,9 +83,9 @@ exports.getCard = function(req, res) {
         if (err)
             res.send(err);
         if (!card)
-            res.render('index', {title: 'Sorry, no such card yet'})
+            res.render('index', {title: 'Error', body: 'Sorry, no such card yet'})
         else {
-            res.render('index', {title: card.title, body: card.text, image: card.image});
+            res.render('card', {title: card.title, body: card.text, image: card.image});
 
         }
     });
@@ -106,7 +106,7 @@ exports.putCard = function(req, res) {
             if (err)
                 res.send(err);
 
-            res.render('index', {cards: json(card)})
+            res.render('card', {cards: json(card)})
         });
     });
 };
