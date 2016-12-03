@@ -1,0 +1,32 @@
+extends layout
+
+block content
+    div(class="container")
+        h2 #{pageTitle}
+        div(class="row")
+            div(class="col s12")
+                ul(class="tabs")
+                    li(class="tab col s6")
+                        a(href="#link") Link
+                    li(class="tab col s6")
+                        a(class="active", href="#post") Post
+            div(class="form-container", id="post")
+                    form#formNewCard(name="newcard",method="post",action="/api/cards",enctype="multipart/form-data")
+                        div(class="input-field col s8")
+                            span Card ID
+                            input(type="text", name="cardid")
+                            input(type="hidden", name="type")
+                        div(class="input-field col s8")
+                            span Title
+                            input#inputTitle(type="text", name="title")
+                        div(class="input-field col s8")
+                            span Text
+                            input#inputText(type="text", name="text")
+                        div(class="file-field input-field col s8")
+                            div(class="btn")
+                                span File
+                                input(type="file", name="image" multiple)
+                            div(class="file-path-wrapper")
+                                input(class="file-path-validate" type="text" placeholder="Upload images")
+                        button#btnSubmit(class="btn center-align" type="submit") post
+            div(id="link") Link
